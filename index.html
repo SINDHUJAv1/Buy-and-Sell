@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUse - Buy & Sell Used Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ReUse</h1>
+        <p>Buy and Sell Used Products Easily</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#sell">Sell Product</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Find Great Deals on Used Products</h2>
+        <p>Give old products a new life!</p>
+        <input type="text" id="searchInput"
+               placeholder="Search products...">
+        <select id="categoryFilter">
+            <option value="All">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Books">Books</option>
+            <option value="Vehicles">Vehicles</option>
+        </select>
+    </section>
+
+    <section id="products">
+        <h2>Available Products</h2>
+        <div id="productList" class="product-container"></div>
+    </section>
+
+    <section id="sell">
+        <h2>Sell Your Product</h2>
+        <form id="productForm">
+            <input type="text" id="productName"
+                   placeholder="Product Name" required>
+
+            <input type="number" id="productPrice"
+                   placeholder="Price in ₹" min="1" required>
+
+            <select id="productCategory" required>
+                <option value="">Choose Category</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Books">Books</option>
+                <option value="Vehicles">Vehicles</option>
+            </select>
+
+            <input type="text" id="sellerName"
+                   placeholder="Seller Name" required>
+
+            <input type="url" id="productImage"
+                   placeholder="Image URL (optional)">
+
+            <button type="submit">Post Product</button>
+        </form>
+        <p id="message"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ReUse Classifieds. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
